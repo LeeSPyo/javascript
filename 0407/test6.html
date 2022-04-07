@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>test5.html</title>
+  <script>
+    'use strict'; // ecma 6에서는 이것을 선언하면 무조건 ecma6 명령어를 선언 후 입력가능
+    // su1 = 100;
+    // let su2 = 200;
+    const su2 = 200;    // const 는 값을 변경하지 못하도록 상수로 만들어주는 역할.
+    let su3 = "seoul";
+    let su4 = 'busan';
+
+    {
+      let su5 = 500;
+      console.log("1.su5 : " + su5)
+    }
+    // ecma 6 에서는 let을 선언해서 블럭 밖의 내용을 사용불가못하게 만듬.
+    // console.log("2.su5 : " + su5);
+
+    // console.log("su1 : " + su1);
+    console.log("su1 type : " + typeof su1);
+    console.log("su2 : " + su2);
+    console.log("su2 type : " + typeof su2);
+    su2 = 20000;
+    console.log("su2 : " + su2);
+
+    console.log("su3 : " + su3);
+    console.log("su3 type : " + typeof su3);
+    console.log("su4 : " + su4);
+  </script>
+</head>
+<body>
+  <h2>이곳은 test5.html입니다.</h2>
+</body>
+</html>
