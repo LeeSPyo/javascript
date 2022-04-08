@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>가입폼</title>
+  <script>
+    'use strict';
+    function fCheck() {
+      let mid = document.getElementById("mid").value;
+      let pwd = document.getElementById("pwd").value;
+      let checkbox = document.getElementById("checkbox").checked;
+      if(mid == "") {
+        alert("아이디를 입력하세요.")
+      }
+      else if(pwd == "") {
+        alert("비밀번호를 입력하세요.")
+      }
+      else if(checkbox == "") {
+        alert("약관 동의를 확인해주세요.")
+      }
+      else {
+        alert("확인했습니다.")
+      }
+    }
+  
+    function fClose() {
+      demo.innerText = "";
+    }
+    function fCheckIn() {
+      let add = document.getElementById("address").value;
+      demo.innerHTML = "<a href = '"+add+"'>"+add+"</a>";
+    }
+  </script>
+</head>
+<body>
+  <h2>회 원 가 입</h2>
+    <form>
+      <div>아이디 : &nbsp;&nbsp;<input type="text" name="mid" id="mid" placeholder="아이디를 입력해주세요."/></div>
+      <div>비밀번호 : <input type="password" name="pwd" id="pwd" maxlength="8" placeholder="비밀번호를 입력해주세요."/></div>
+      <p><input type="checkbox" name="checkbox" id="checkbox" />약관을 동의해 주세요.</p>
+      <div>주소 : &nbsp;&nbsp;<input type="text" name="address" id="address" placeholder="주소를 입력해주세요."/></div>
+      <p>
+        <input type="button" name="button1" value="확인" onclick="fCheck()"/>&nbsp;&nbsp;
+        <input type="button" name="button2" value="취소" onclick="fClose()"/>
+        <input type="button" name="button3" value="이동" onclick="fCheckIn()"/>
+      </p>
+      <div id="demo"></div>
+    </form>
+</body>
+</html>

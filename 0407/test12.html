@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>test12.html</title>
+  <script>
+    'use strict'
+    function fCheck() {
+      let url = document.getElementById("url").value;
+      if(url == "") {
+        alert("주소를 입력하세요.");
+        document.getElementById("url").focus
+      }
+      else {
+        alert("입력된 주소는 ? " + url)
+        demo.innerHTML = "<a href = '"+url+"' target='_blank'>"
+          +address+"</a><input type='button' value='닫기' onclick='fClose()";
+      }
+    }
+    function fClose() {
+      demo.innerText = "";
+    }
+  </script>
+</head>
+<body>
+  <form name="myform">
+    <p>
+      이동할 주소를 입력후 이동버튼을 클릭하면 해당 주소가 
+      가상(demo)에 출력되어, 그 주소를 클릭하면 새창으로 이동하도록 만드시오.
+    </p>
+    <p><label for"">주소</label> :
+      이동할 주소 : <input type="text" name="url" id="url"/></p>
+    <p>
+      <input type="button" value="확인" onclick="fCheck()"/>
+    </p>
+    <div id="demo"></div>
+  </form>
+</body>
+</html>

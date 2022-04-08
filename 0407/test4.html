@@ -5,7 +5,12 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>test4.html</title>
-  <script src="../js/test.js"></script>
+  <!-- <script src="../js/test.js"></script> -->
+  
+  <!-- async : 읽어오는동안 수행을 계속해라 그리고 다읽으면 수행 (다 읽는 순간 출력) -->
+  <!-- <script async="../js/test.js"></script> -->
+  <!-- defer : 내려가다가 만나서 수행 (마지막에 출력) -->
+  <script defer="../js/test.js"></script>
 </head>
 <body>
   <input type="button" value="call1 호출" onclick="call1()"/>
