@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>test5_3.html</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    'use strict';
+
+   function fCheck() {
+     //  let food = myForm.food.value;
+     let food = document.getElementById("food").value;
+     if(food == "") {
+       alert("음식을 선택하세요");
+       document.getElementById("demo").innerHTML = "음식을 선택하세요";
+     }
+     else {
+       location.href = food;
+     }
+   }
+  </script>
+</head>
+<body>
+<p><br/></p>  
+<div class="container">
+  <form name="myForm">
+    <div class="form-group">
+      <h2>콤보박스</h2>
+      <p>음식을 선택하면 해당 사이트로 이동합니다.</p>
+    </div>
+    <div class="form-group m-3">
+      <label for="season">좋아하는 음식은 ?</label>
+      <select name="food" id="food" size="1" onchange="fCheck()" class="form-control m-2">
+        <option value="">선택하세요</option>
+        <option value="https://namu.wiki/w/짜장면">짜장면</option>
+        <option value="http://m.thechungdam.com/#__173761__item6">피자</option>
+        <option value="https://namu.wiki/w/사과">사과</option>
+        <option value="https://namu.wiki/w/찐빵">찐빵</option>
+        <option value="https://namu.wiki/w/떡볶이">떡볶이</option>
+        <option value="https://namu.wiki/w/돈가스">돈가스</option>
+        <option value="https://namu.wiki/w/라면">라면</option>
+        <option value="https://namu.wiki/w/비빔밥">비빔밥</option>
+      </select>
+      <div class="form-group m-3">
+        <input type="button" value="선택" onclick="fCheck()" class="btn btn-success form-control m-1"/>
+        <input type="button" value="취소" onclick="location.reload()" class="btn btn-success form-control m-1"/>
+      </div>
+      <br/>
+      <div id="demo"></div>
+    </div>
+  </form>
+</div>
+</body>
+</html>
